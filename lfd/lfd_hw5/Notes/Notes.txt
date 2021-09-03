@@ -1,0 +1,15 @@
+1. Why does the entropy error decrease and the epochs increase when the magnitude of the gradient increases, the reverse also holds?
+
+ANSWER = If we make the magnitude of the gradient large, we will in each iteration add or subtract more to the current hypothesis (weights). The probability of surpassing the threshold by a lot is high if the magnitude of gradient is high in comparison to the threshold limit. One has though to be careful to not make it (magnitude of gradient) so large that you never superpass the limit threshold 
+(|w_g-w_old|) or that it takes unreasonably long time to reach it. So given the fact that we have enough time, it is better to take a large gradient given that the mission is to gather the smallest possible E_out.
+
+2. Why is y = kx + m, when written as a weight, written as: [m,k,-1]
+
+ANSWER = Check vector format. T0+T1*X1+T2*X2 = 0. 
+y =  kx + m <=> 0 =  m  + k(x) + -1(y) =  m + k(X1) + -1(X2).
+Where: M = T0, K = T1, -1 = T2 = > [T0,T1,T2]
+(However, I think that you can reorder their vector placement without problem)
+
+3. Why shuffle points?
+ 
+ANSWER = We shuffle all the points in each epoch in order to guarantee that we approach the global minimum through a different thread of points. 

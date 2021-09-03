@@ -1,0 +1,55 @@
+k= 1     => E_val = 0.5
+k= 2     => E_val = 0.7
+k= 3     => E_val = 0.3
+k= 4     => E_val = 0.5
+k= 5     => E_val = 0.2
+k= 6     => E_val = 0.0
+k= 7     => E_val = 0.1
+
+k= 1     => E_out = 0.488
+k= 2     => E_out = 0.648
+k= 3     => E_out = 0.42
+k= 4     => E_out = 0.416
+k= 5     => E_out = 0.188
+k= 6     => E_out = 0.084
+k= 7     => E_out = 0.072
+
+0.0 (k =6) < 0.01 (k =7)
+0.072 (k=7) < 0.084 (k =6)
+
+Small Validation Set:
+Check error (Training Set/6 =
+35/6 = 6)
+10
+
+Big trainig set example:
+-> Our parameters will be more accurate
+25
+---------------------------------- 
+k= 1     => E_val = 0.44
+k= 2     => E_val = 0.44
+k= 3     => E_val = 0.28
+k= 4     => E_val = 0.36
+k= 5     => E_val = 0.2
+k= 6     => E_val = 0.08
+k= 7     => E_val = 0.12
+
+k= 1     => E_out = 0.472
+k= 2     => E_out = 0.5
+k= 3     => E_out = 0.396
+k= 4     => E_out = 0.388
+k= 5     => E_out = 0.284
+k= 6     => E_out = 0.192
+k= 7     => E_out = 0.196
+
+0.08 < 0.12
+0.192 < 0.196
+
+Big Validation Set:
+If this is BIG -> Tracking GOOD
+
+Small training example:
+Small traning (10) ->
+parameters -> bad -> bad parameters -> bad result
+
+-> 5: 1) Around 0.1; 2) Around 0.2 -> Answer: [b]

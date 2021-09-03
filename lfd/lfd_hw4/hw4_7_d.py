@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb 24 07:01:07 2021
+
+@author: Mahmu
+"""
+
+# HYPOTHESIS: h(x) = ax^2
+
+import numpy as np
+
+def problem4():
+    
+    RUNS = 1000
+    a_total = 0
+    N = 2          # size of data set
+    
+    for _ in range(RUNS):
+        # two random points
+        x_rnd = np.random.uniform(-1, 1, N)
+        y_rnd = np.sin(np.pi * x_rnd)
+
+        # linear regression for model y = ax^2
+        X = np.array([x_rnd * x_rnd]).T
+        w = np.dot(np.dot(np.linalg.inv(np.dot(X.T, X)), X.T), y_rnd)
+        a = w[0]
+
+        a_total += a
+        
+    a_avg = a_total / RUNS
+    return a_avg
+
+print("h(x) = ax^2")
+print("solution problem 7: a_avg = ", problem4())
+
+
+#-------------------------------------------------------------------------
+
+
+def problem5():
+    N_test = 1000
+    x_test = np.random.uniform(-1,1,N_test)
+
+    y_f = np.sin(np.pi * x_test)
+    a_avg = problem4()
+    y_g_bar = a_avg * (x_test * x_test)
+
+    bias = sum((y_f - y_g_bar)**2) / N_test
+    return bias
+    
+
+print("\nSolution to problem 7: bias = ", problem5())
+
+#--------------------------------------------------------------------------
+
+def problem6():
+    a_avg = problem4()
+    expectation_over_X = 0
+    
+    RUNS_D = 100
+    RUNS_X = 1000
+    # variance: Compare each g to g_bar
+    
+    for i in range(RUNS_X):
+        N = 2
+        x_test = np.random.uniform(-1,1)
+        expectation_over_D = 0
+        
+        for _ in range(RUNS_D):
+            # two random points as data set D
+            x_rnd = np.random.uniform(-1, 1, N)
+            y_rnd = np.sin(np.pi * x_rnd)
+
+            # linear regression for model y = ax^2
+            # get a particular g^(D)
+            X = np.array([x_rnd * x_rnd]).T
+            w = np.dot(np.dot(np.linalg.inv(np.dot(X.T, X)), X.T), y_rnd)
+            a  = w[0]
+            
+            # calculate difference on test point
+            y_g = a * x_test**2
+            y_g_bar = a_avg * x_test**2
+            expectation_over_D += (y_g - y_g_bar)**2 / RUNS_D
+
+        expectation_over_X += expectation_over_D / RUNS_X
+    
+    variance = expectation_over_X
+    return variance
+
+
+print("\nSolution to problem 7, variance = ", problem6())
