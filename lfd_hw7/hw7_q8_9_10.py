@@ -305,7 +305,7 @@ def problem_8(N_train, RUNS=1000, SHOW_PLOT_TRAIN=False, SHOW_PLOT_TEST=False, P
         
             plt.xlabel('$x_1$')
             plt.ylabel('$x_2$')
-            plt.title('Problem 8')
+            plt.title('Problem 8 in HW7')
             plt.legend()
             plt.show()
             
@@ -322,7 +322,7 @@ def problem_8(N_train, RUNS=1000, SHOW_PLOT_TRAIN=False, SHOW_PLOT_TEST=False, P
     
     return E_test_PLA_avg, E_test_SVM_avg, SVM_better_than_PLA_avg, num_SVM_vectors_avg    
 
-""" QUESTION 8: [c] ~= 0.593-0.598, closest to 60 %
+"""QUESTION 8: [c] ~= 0.593-0.598, closest to 60 %
 # set N_train = 10
 start_time = time.time()
 E_test_PLA_avg, E_test_SVM_avg, count_SVM_better_than_PLA, num_SVM_vectors_avg = problem_8(N_train=10, RUNS=1000)

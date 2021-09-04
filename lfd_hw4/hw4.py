@@ -93,7 +93,7 @@ def runQ2():
     pylab.title("Generalization error as a function of number of examples")
     pylab.show()
     
-#runQ2()
+runQ2()
 
 # 3. Same d_vc, same delta, small N, say, N = 5
 

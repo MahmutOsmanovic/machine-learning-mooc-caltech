@@ -126,6 +126,9 @@ def runSimulation(numberOfTrials, numberOfTestPoints, iterationLimit): #1000,10,
 
     print("Avg. iterations: " + str(np.mean(interations)) + " : Avg. error probability: " + str(np.mean(probability)))
     pylab.hist(interations)
+    pylab.xlabel("Number of iteration for convergence")
+    pylab.ylabel("Times converged for 'x' amount of iterations")
+    pylab.title("Average amout of iterations for 100 trials")
     pylab.show()
 
 # Runs one trial based on the number of test points desired and an iteration limit to cap run time.
