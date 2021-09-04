@@ -46,7 +46,6 @@ These are all the topics machine learning topics covered in the course: https://
 Here comes some of the plots that I've made during the run of these course, hopefully, they are a little bit inspirational.
 ![](images/Lloyd.gif)
 
-![](images/Figure_1.png)
 ![](images/Figure_2.png)
 ![](images/Figure_3.png)
 ![](images/Figure_4.png)
