@@ -42,5 +42,3 @@ Lecture 17: Three Learning Principles
 Lecture 18: Epilogue
 
 These are all the topics machine learning topics covered in the course: https://work.caltech.edu/library/
-
-![](images/Figure_1.png)
