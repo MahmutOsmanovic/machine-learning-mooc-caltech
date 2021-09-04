@@ -43,4 +43,4 @@ Lecture 18: Epilogue
 
 These are all the topics machine learning topics covered in the course: https://work.caltech.edu/library/
 
-I will, in the near future, update this readme file with snippets from each a description of each weeks workload in addition to informative results in the format of pictures.
+![](images/Figure_1.png)
